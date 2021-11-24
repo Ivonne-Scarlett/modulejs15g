@@ -1,14 +1,14 @@
-let a = parseInt(prompt('Introduce el primer número que requieres'))
-let b = parseInt(prompt('Introduce el primer número que requieres'))
-let c = 0
+let number1 = parseInt(prompt('Introduce el primer número que requieres'))
+let number2 = parseInt(prompt('Introduce el segundo número que requieres'))
+let result = 0
 
-if(a > b){
-    c = a / b
-    console.log('La division es:', c)
-}else if(a < b){
-    c = a + b
-    console.log('La suma es:', c)
-}else if(a==b){
-    c = a * b
-    console.log('La multiplicacion es:', c)
+if(number1 > number2){
+    result = number1 / number2
+    console.log('La division es:', result)
+}else if(number1 < number2){
+    result = number1 + number2
+    console.log('La suma es:', result)
+}else if(number1==number2){
+    result = number1 * number2
+    console.log('La multiplicacion es:', result)
 }
