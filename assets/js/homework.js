@@ -40,14 +40,12 @@ if(wordUser != ''){
 
 //Imprimir en consola la suma de multiplos de 5 y 3
 
-var multiplo3 = 0
-var multiplo5 = 0
+let multiplo3 = 0
 
-for (i = 100; i <= 1; i--){
-    if(i % 3 == 0){
+
+for (i = 100; i >= 1; i--){
+    if(i % 3 === 0 && i % 5 === 0 ){
         multiplo3 = multiplo3 + i        
-    }else if(i % 5 == 0){
-        multiplo5 = multiplo5 + i
     }
 }
-console.log(`La suma total de los multiplos de 3 es: ${multiplo3}. La suma total de los multiplos de 5 es: ${multiplo5}`)
+console.log(`La suma total de los multiplos es: ${multiplo3}`)
