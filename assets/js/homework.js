@@ -40,8 +40,7 @@ if(wordUser != ''){
 
 //Imprimir en consola la suma de multiplos de 5 y 3
 
-let multiplo3 = 0
-
+/*let multiplo3 = 0
 
 for (i = 100; i >= 1; i--){
     if(i % 3 === 0 && i % 5 === 0 ){
@@ -49,3 +48,4 @@ for (i = 100; i >= 1; i--){
     }
 }
 console.log(`La suma total de los multiplos es: ${multiplo3}`)
+*/
