@@ -45,18 +45,16 @@
 
 
 
-// const sumaMultiplosRow = (j = 3, k = 5) => {
-//     let multiplos = 0
-//     let j = parseInt(prompt('Introduce el número de multiplos que deseas obtener'))
-//     let k = parseInt(prompt('Introduce el número de multiplos que deseas obtener'))
-//     for (i = 100; i >= 1; i--){        
-//         if (i % 3 === 0 && i % 5 ===0){
-//             multiplos = multiplos + i
-//         }
-//     }
-//     return console.log(`La suma total de los multiplos es: ${multiplos}`)	
-// }
-// sumaMultiplosRow()
+const sumaMultiplosRow = (j = 3, k = 5) => {
+    let multiplos = 0
+    for (i = 100; i >= 1; i--){        
+        if (i % 3 === 0 && i % 5 ===0){
+            multiplos = multiplos + i
+        }
+    }
+    return console.log(`La suma total de los multiplos es: ${multiplos}`)	
+}
+sumaMultiplosRow()
 
 
 
