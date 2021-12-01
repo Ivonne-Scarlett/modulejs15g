@@ -1,39 +1,118 @@
-function funPalindrome(wordUser){
-	//const wordUser = prompt('Dame una palabra ').trim().toLowerCase()
-	//let wordWithoutSpace = ''
-	//let wordReversed = ''
 
-		if(wordUser != ''){
+
+// const tablasArrow = (j = 10) => {
+//     for (i = 0; i <= 10; i++){
+//         console.log(`Tabla del ${i}`)
+//         for (j = 0; j<= 10; j++){
+//              console.log(`${i} * ${j} = ${i*j}`)
+//         }
+//     }
+// 	return
+// }
+// tablasArrow()
+
+
+
+
+
+// const sumasRow = (newNum = 10) =>{
+//     let resultado = 0
+//     for (i = 0; i <= newNum; i++){
+//         resultado = resultado + i
+//     }
+//     return console.log(resultado)
+// }
+// sumasRow()
+
+
+
+
+
+
+// const sumaDigitosRow = (cantidad = '1234') => {
+//     for (i = 0; i < cantidad.length; i++){
+//         sumatoria += parseInt(cantidad[i])
+//     }
+//     return console.log(sumatoria)
+// }
+// let digitos = prompt('Introduce una cantidad')
+// let sumatoria = 0
+
+// sumaDigitosRow(digitos)
+
+
+
+
+
+
+// const sumaMultiplosRow = (j = 3, k = 5) => {
+//     let multiplos = 0
+//     let j = parseInt(prompt('Introduce el número de multiplos que deseas obtener'))
+//     let k = parseInt(prompt('Introduce el número de multiplos que deseas obtener'))
+//     for (i = 100; i >= 1; i--){        
+//         if (i % 3 === 0 && i % 5 ===0){
+//             multiplos = multiplos + i
+//         }
+//     }
+//     return console.log(`La suma total de los multiplos es: ${multiplos}`)	
+// }
+// sumaMultiplosRow()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function funPalindrome(wordUser){
+// 	const wordUser = prompt('Dame una palabra ').trim().toLowerCase()
+// 	let wordWithoutSpace = ''
+// 	let wordReversed = ''
+
+// 		if(wordUser != ''){
 		
-			for(i = 0; i < wordUser.length; i++){
-				if(wordUser[i] !== ' '){
-					wordWithoutSpace = wordWithoutSpace +  wordUser[i]
-				}
-			}
+// 			for(i = 0; i < wordUser.length; i++){
+// 				if(wordUser[i] !== ' '){
+// 					wordWithoutSpace = wordWithoutSpace +  wordUser[i]
+// 				}
+// 			}
 			
 		
-			for(j = wordWithoutSpace.length - 1; j >= 0 ; j--){
-				wordReversed = wordReversed + wordWithoutSpace[j]
-			} 
+// 			for(j = wordWithoutSpace.length - 1; j >= 0 ; j--){
+// 				wordReversed = wordReversed + wordWithoutSpace[j]
+// 			} 
 			
 
-			wordWithoutSpace === wordReversed ?
-				console.log(`La palabra "${wordUser}" es un palindromo`)
-			:
-				console.log(`La palabra "${wordUser}" No es un palindromo`)
+// 			wordWithoutSpace === wordReversed ?
+// 				console.log(`La palabra "${wordUser}" es un palindromo`)
+// 			:
+// 				console.log(`La palabra "${wordUser}" No es un palindromo`)
 			
 
-		} else {
-			console.log('Inserta una palabra valida')
-		}
+// 		} else {
+// 			console.log('Inserta una palabra valida')
+// 		}
 	
-}
+// }
 
-const wordUser = prompt('Dame una palabra ').trim().toLowerCase()
-let wordWithoutSpace = ''
-let wordReversed = ''
+// const wordUser = prompt('Dame una palabra ').trim().toLowerCase()
+// let wordWithoutSpace = ''
+// let wordReversed = ''
 
-funPalindrome(wordUser)
+// funPalindrome(wordUser)
 
 
 
