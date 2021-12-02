@@ -1,29 +1,24 @@
 
-
-const tablasArrow = (j = 10) => {
-    for (i = 0; i <= 10; i++){
-        console.log(`Tabla del ${i}`)
-        for (j = 0; j<= 10; j++){
-             console.log(`${i} * ${j} = ${i*j}`)
-        }
-    }
-	return
-}
-tablasArrow()
-
+// const tablasArrow = (k = 10) => {
+//     for (i = 0; i <= k; i++){
+//         console.log(`Tabla del ${i}`)
+//         for (j = 0; j<= 10; j++){
+//              console.log(`${i} * ${j} = ${i*j}`)
+//         }
+//     }
+// 	return
+// }
+// tablasArrow()
 
 
-// const sumasArow = (newNum = 10) =>{
+// const sumasArow = (newNum = 10) => {
 //     let resultado = 0
-//     for (i = 0; i <= newNum; i++){
+//     for (i = 1; i <= newNum; i++){
 //         resultado = resultado + i
 //     }
 //     return console.log(resultado)
 // }
 // sumasArow()
-
-
-
 
 
 
@@ -40,9 +35,6 @@ tablasArrow()
 
 
 
-
-
-
 // const sumaMultiplosArow = (j = 3, k = 5) => {
 //     let multiplos = 0
 //     for (i = 100; i >= 1; i--){        
@@ -53,6 +45,10 @@ tablasArrow()
 //     return console.log(`La suma total de los multiplos es: ${multiplos}`)	
 // }
 // sumaMultiplosArow()
+
+
+
+//Arrays
 
 
 
