@@ -71,21 +71,21 @@
 //  * -> [1,2]
 // */
 
-let array1 = [4,8,9,12]
-let array2 = [7,12,4,1]
+// let array1 = [4,8,9,12]
+// let array2 = [7,12,4,1]
 
-function arrayReduce(){
-if
-let numbers = 
-}
+// function arrayReduce(){
+// if
+// let numbers = 
+// }
 
-let array1 = [4,8,9,12]
-let array2 = [7,12,4,1]
+// let array1 = [4,8,9,12]
+// let array2 = [7,12,4,1]
 
-const result = ages.filter(checkAdult);
+// const result = ages.filter(checkAdult);
 
-function checkAdult(age) {
-return age >= 18;
-}
+// function checkAdult(age) {
+// return age >= 18;
+// }
 
 

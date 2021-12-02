@@ -1,3 +1,42 @@
+//arr.forEach()
+//Dado un array con sólo números, obtener el valor menor
+
+// const menorFunc = (arr) => {
+// 	let menor = arr[0]
+// 	arr.forEach( (value, index, array) => {
+// 		if( menor > value){
+// 			menor = value
+// 		}
+// 	})
+// 	return menor
+// }
+// console.log( menorFunc( [5, 4, 3, 10] ) )
+
+
+
+// .map()
+// función
+// Dado unn array como parametro 
+// capitalizar todos los elementos que sean strings
+// typeof variable
+// input: ['hOlA', 'mundo', 123]
+// output -> ['Hola','Mundo', 123]
+
+let capitalizeArr = (['hOlA', 'mundo', 123])
+
+const capitalizeArr = arr.map ( (val)=> {
+	if (arr.typeoff = 'string' ){
+		let resultCap = `${arr.slice(0,1).toUpperCase()}${arr.slice(1).toLowerCase()}`
+	} 
+	return
+})
+console.log(resultCap)
+
+
+
+
+
+
 
 // const tablasArrow = (k = 10) => {
 //     for (i = 0; i <= k; i++){
