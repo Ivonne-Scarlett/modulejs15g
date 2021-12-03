@@ -1,3 +1,49 @@
+
+// ['hOla','munDo']
+// -> ['Hola','Mundo']
+
+// const capitalizeWithMap = arr => {
+// 	let resultCap = [] //text1 = '', text2 = ''
+// 	resultCap = arr.map ( palabra => {
+// 		if(typeof palabra === 'string'){
+// 			resultCap = `${palabra.slice(0,1).toUpperCase()}${palabra.slice(1).toLowerCase()}`
+// 			return resultCap
+// 		} 
+// 	})
+// 	return resultCap
+	
+// }
+
+// let capitalize = (capitalizeWithMap(['hOlA', 'mundo', 123]))
+// console.log(capitalize)
+
+
+// ['hola','mundo',0,5]
+// ['hola','mundo']
+//Filtrar los que son string
+
+let arrayFilter = ['hola','mundo',0,5]
+let resultFilter = []
+
+resultFilter = arrayFilter.filter ( valor => {
+	if ( typeof valor === 'string'){
+		return valor
+	}		 
+})
+
+console.log(resultFilter)
+
+
+
+
+
+
+
+
+
+
+
+
 //arr.forEach()
 //Dado un array con sólo números, obtener el valor menor
 
@@ -22,15 +68,15 @@
 // input: ['hOlA', 'mundo', 123]
 // output -> ['Hola','Mundo', 123]
 
-let capitalizeArr = (['hOlA', 'mundo', 123])
+// let capitalizeArr = (['hOlA', 'mundo', 123])
 
-const capitalizeArr = arr.map ( (val)=> {
-	if (arr.typeoff = 'string' ){
-		let resultCap = `${arr.slice(0,1).toUpperCase()}${arr.slice(1).toLowerCase()}`
-	} 
-	return
-})
-console.log(resultCap)
+// const capitalizeArr = arr.map ( (val)=> {
+// 	if (arr.typeoff = 'string' ){
+// 		let resultCap = `${arr.slice(0,1).toUpperCase()}${arr.slice(1).toLowerCase()}`
+// 	} 
+// 	return
+// })
+// console.log(resultCap)
 
 
 

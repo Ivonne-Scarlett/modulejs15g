@@ -1,91 +1,51 @@
-/*
- * Escribir un arrow function que invierta una oracion
- * pista: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
- * pista: https://www.w3schools.com/jsref/jsref_join.asp
-*/
 
-// let text = [prompt('Introduce una frase')]
-// let reverse = text.reverse()
-// console.log(reverse)
 
-// const invert = () =>{
-//     var text = prompt('Introduce una frase')
-//     var reverse = ''  
-//     for(let i = text.length-1; i >= 0; i--){
-//         reverse += text[i];
-//     }
-//     console.log(reverse);
-// }
-// invert()
+// 1. Generar una function
+// que reciba un array como parametro
+// y devuelva solo los items que son pares
+// p.ej. onlyEvenValues( [1, 2, 3, 4] )
+// -> [2, 4]
+// Aplicar el metodo .forEach()
+// hint: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
+
+const onlyEvenValues = arrNumbers => {
+    // codigo aquí
+}
 
 
 
-// / **
-//  * Escribir una función de flecha que compruebe
-//  * si una oración es un palindromo
-//  * pista: https://ricardometring.com/javascript-replace-special-characters
-//  * pista: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
-//  * /
+// 2. function que reciba como parametro una array de strings
+// y devuelva la primer y ultima letra del string
+// de cada uno de los items del array 
+// -> firstAndLast (['hola', 'mundo'] )
+// -> ['ha', 'mo']
+// .forEach() o .map()
 
-// const palindromo = () => {
-//     var text = prompt('Introduce una frase')
-//     var reverse = ''  
-//     for(let i = text.length-1; i >= 0; i--){
-//         reverse += text[i];
-//     }    
-//     if (text === reverse){
-//         console.log('El texto es un palindromo')
-//     } else {
-//         console.log('El texto no es un palindromo')
-//     }
-// }
-// palindromo()
+const firstAndLast = arrStrings => {
+    // codigo aquí
 
+}
 
+/**
+ * 3. Funcion que reciba un array de numeros
+ * y devuelva el promedio
+ * -> getAverage( [10, 8, 9, 7] )
+ * -> 8.5
+ */
 
-// / **
-//  * Escribir un arrow function que tome como parametro 2 arrays, 
-//  * y devuelva un numero con la suma total de esos 2 arrays.
-//  * arrayReduce ([1,2,3,4], [1,2]) 
-//  * -> 13
-//  * 
-//  * pista: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
-//  * pista: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
-//  * 
-// * /
+const getAverage = (arr) => {
 
-// const arraySuma = () =>{
-//     let array1 = [4,8,9,12]
-//     let array2 = [7,12,4,1]
-//     let arrayTotal =  array1.concat(array2)
-//     console.log(arrayTotal)
-// }
-// arraySuma()
+}
 
 
+//  4. funcion
+// dado un array de años, filtre los elementos
+// y devuelva un array con los años que son bisiesto
+// convertLeapYear( [1990, 2000, 2001, 2020] )
+// -> [2000,2020]
+// .forEach()
+// hint: https://docs.microsoft.com/es-es/office/troubleshoot/excel/determine-a-leap-year
 
-// / **
-//  * Escribir una función que tome como parametro 2 arrays, y devuelva un array 
-//  * con los numeros repetidos en los 2 arrays
-//  * arrayReduce ([1,2,3,4], [1,2,5]). 
-//  * -> [1,2]
-// */
-
-// let array1 = [4,8,9,12]
-// let array2 = [7,12,4,1]
-
-// function arrayReduce(){
-// if
-// let numbers = 
-// }
-
-// let array1 = [4,8,9,12]
-// let array2 = [7,12,4,1]
-
-// const result = ages.filter(checkAdult);
-
-// function checkAdult(age) {
-// return age >= 18;
-// }
-
-
+const convertLeapYear = arr => {
+    
+}
