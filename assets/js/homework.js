@@ -1,51 +1,93 @@
-
-
-// 1. Generar una function
-// que reciba un array como parametro
-// y devuelva solo los items que son pares
-// p.ej. onlyEvenValues( [1, 2, 3, 4] )
-// -> [2, 4]
-// Aplicar el metodo .forEach()
-// hint: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push
-
-const onlyEvenValues = arrNumbers => {
-    // codigo aquí
-}
-
-
-
-// 2. function que reciba como parametro una array de strings
-// y devuelva la primer y ultima letra del string
-// de cada uno de los items del array 
-// -> firstAndLast (['hola', 'mundo'] )
-// -> ['ha', 'mo']
-// .forEach() o .map()
-
-const firstAndLast = arrStrings => {
-    // codigo aquí
-
-}
-
 /**
- * 3. Funcion que reciba un array de numeros
- * y devuelva el promedio
- * -> getAverage( [10, 8, 9, 7] )
- * -> 8.5
+ * arr.forEach()
+ * Dado el siguiente array 
+ * ['string','value','min','asdfghjk']
+ * Hacer una funcion que devuelva el string con mas caracteres
+ * 
  */
 
-const getAverage = (arr) => {
+//  const mostLarge  = (arr) => {
+//     let newLarge = []
+// 	arr.forEach( value => {
+// 		let newText = console.log(prompt('Ingresa los caracteres adicionales'))		
+//         newLarge = value.concat(newText)        
+// 	})
+// 	return newLarge
+// }
 
+// let arrayOriginal = ['string','value','min','asdfghjk']
+// let result = mostLarge(arrayOriginal)
+// console.log(result)
+
+
+
+
+/**
+ * arr.map()
+ * Dado un array 
+ * Hacer una funcion que devuelva el mismo array
+ * Pero con los items al reves
+ * P.ej. reverseStringArr( ['string','value','min'] )
+ * Salida: ['gnirts','eulav','nim']
+ * 
+ */
+
+
+// const reverseStringArr = (arr) => {
+
+// 	let newString =  []
+// 	textReverse = arr.map( element => element.reverse() )
+// }
+
+// let originalArr = ['string','value','min']
+// let result = reverseStringArr(originalArr)
+// console.log(result)
+
+
+
+/**
+ * arr.filter(), .map()
+ * Funcion que reciba un array de strings y numeros
+ * Filtre solo los strings
+ * luego, Capitalice cada string
+ * luego, filtre solo los que tengan mas de 5 caracteres
+ * y al final, los que tengan al menos 2 letras "a" 
+ * 
+ * p.ej.  filterStrings( ['guadalajara', 3, 'caracas', 'Oslo', 'brasil', 0] )
+ * Salida -> ['Guadalajara', 'Caracas']
+ */
+
+
+ const filterStrings = (arr) => {
+	let onlyStrings = []
+	onlyStrings = arr.filter( (item) => {
+		if(typeof item === 'string') {
+			return item
+		}
+	})
+
+	let toUpper = []
+	toUpper = onlyStrings.map( (item) => {
+		return item.slice(0,1).toUpperCase() + item.slice(1,-1).toLowerCase()
+	})
+
+	let onlytext5 = []
+	onlytext5 = toUpper.filter( (item ) => { 
+		if ( item.length > 4 ) {
+			return item
+		}
+	})
+
+	let textA = []
+	textA = onlytext5.filter( (item ) => { 
+		if ( item.split('a').length > 2 ) {
+			return item
+		}
+	})
+
+	return textA
 }
 
-
-//  4. funcion
-// dado un array de años, filtre los elementos
-// y devuelva un array con los años que son bisiesto
-// convertLeapYear( [1990, 2000, 2001, 2020] )
-// -> [2000,2020]
-// .forEach()
-// hint: https://docs.microsoft.com/es-es/office/troubleshoot/excel/determine-a-leap-year
-
-const convertLeapYear = arr => {
-    
-}
+let originalArr = ['guadalajara', 3, 'caracas', 'Oslo', 'brasil', 0]
+let result = filterStrings(originalArr)
+console.log(result)
