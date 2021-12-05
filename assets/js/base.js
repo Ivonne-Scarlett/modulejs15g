@@ -1,4 +1,47 @@
 
+
+// const fullname = ['ivonne', 'chavez']
+// let fullNameStr = ''
+// fullNameStr = fullname.reduce( (acc,cv) =>{		
+// 		//return acc + cv
+// 		return `${acc} ${cv}`
+// }, 'Nombre completo: ')
+// console.log(fullNameStr)
+
+
+
+// const fullname = ['Ivonne', 'Scarlett', 'Chavez', 'Medina']
+// let fullNameStr = ''
+// fullNameStr = fullname.reduce( (acc,cv) =>{		
+// 		return acc + cv.slice(0,1)
+// 		//return acc + cv.slice(0,1) + cv.slice(-1)
+// 		//return `${acc} ${cv.slice(0,1)}`
+// }, 'Las iniciales del nombre son: ')
+// console.log(fullNameStr)
+
+
+let arrRedNumbers = [11,10,9]
+
+let ressArrReduced = []
+arrRedNumbers.reduce((acc,cv) => {
+	acc.push(cv * 2)
+	return acc
+},[])
+console.log(ressArrReduced)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ['hOla','munDo']
 // -> ['Hola','Mundo']
 
@@ -22,16 +65,16 @@
 // ['hola','mundo']
 //Filtrar los que son string
 
-let arrayFilter = ['hola','mundo',0,5]
-let resultFilter = []
+// let arrayFilter = ['hola','mundo',0,5]
+// let resultFilter = []
 
-resultFilter = arrayFilter.filter ( valor => {
-	if ( typeof valor === 'string'){
-		return valor
-	}		 
-})
+// resultFilter = arrayFilter.filter ( valor => {
+// 	if ( typeof valor === 'string'){
+// 		return valor
+// 	}		 
+// })
 
-console.log(resultFilter)
+// console.log(resultFilter)
 
 
 
