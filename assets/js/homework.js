@@ -1,93 +1,86 @@
-/**
- * arr.forEach()
- * Dado el siguiente array 
- * ['string','value','min','asdfghjk']
- * Hacer una funcion que devuelva el string con mas caracteres
- * 
- */
 
-//  const mostLarge  = (arr) => {
-//     let newLarge = []
-// 	arr.forEach( value => {
-// 		let newText = console.log(prompt('Ingresa los caracteres adicionales'))		
-//         newLarge = value.concat(newText)        
+/** 
+ * Dado un arreglo con nombres de personas, 
+ * devuele un arreglo con los nombres de las personas que empiezan con vocales (capitalizados)
+ * onlyNamesVowels( ['jorge','ana','ivan','sergio','luis','oscar' ] )
+ * -> ['Ana','Ivan','Oscar']
+*/
+
+// const filterStrings = (arr) => {
+// 	let onlyStrings = []
+// 	onlyStrings = arr.filter( (item) => {
+// 		if(item.slice(0,1) === 'a' || item.slice(0,1) === 'e' || item.slice(0,1) === 'i' || item.slice(0,1) === 'o' || item.slice(0,1) === 'u'){
+// 			return item.slice(0,1).toUpperCase() + item.slice(1,-1).toLowerCase()
+// 		}
 // 	})
-// 	return newLarge
+//     return onlyStrings	
 // }
 
-// let arrayOriginal = ['string','value','min','asdfghjk']
-// let result = mostLarge(arrayOriginal)
+// let originalArr = ['jorge','ana','ivan','sergio','luis','oscar']
+// let result = filterStrings(originalArr)
 // console.log(result)
 
 
 
+// let originalArr = ['jorge','ana','ivan','sergio','luis','oscar']
+// const newOriginalArr = originalArr.filter ( item => {
+//     if(item.slice(0,1) === 'a' || item.slice(0,1) === 'e' || item.slice(0,1) === 'i' || item.slice(0,1) === 'o' || item.slice(0,1) === 'u'){        
+//         return item.slice(0,1).toUpperCase() + item.slice(1,-1).toLowerCase()
+//     }
+// })
+// console.log(newOriginalArr)
 
-/**
- * arr.map()
- * Dado un array 
- * Hacer una funcion que devuelva el mismo array
- * Pero con los items al reves
- * P.ej. reverseStringArr( ['string','value','min'] )
- * Salida: ['gnirts','eulav','nim']
+// let originalArr = ['jorge','ana','ivan','sergio','luis','oscar']
+// let arrFiltered = originalArr.filter(item => item.slice(0,1) === 'a' || item.slice(0,1) === 'e' || item.slice(0,1) === 'i' || item.slice(0,1) === 'o' || item.slice(0,1) === 'u')
+// let capitalized = arrFiltered.map(item => item.slice(0,1).toUpperCase() + item.slice(1).toLowerCase())
+// console.log(capitalized)
+
+
+
+
+let originalArr = ['jorge','ana','ivan','sergio','luis','oscar']
+let arrFiltered = originalArr.filter(item => item.slice(0,1) === 'a' || item.slice(0,1) === 'e' || item.slice(0,1) === 'i' || item.slice(0,1) === 'o' || item.slice(0,1) === 'u')
+.map(item => item.slice(0,1).toUpperCase() + item.slice(1).toLowerCase())
+console.log(arrFiltered)
+
+
+
+
+
+
+
+/*
+ * 
+ * Dado una arreglo compuesto por arreglos, 
+ * crea una funcion que calcule la suma de los arreglos y posteriormente la suma de las sumas
+ * additionMultiArr(  [	[1,2,3] , [1,3,2] , [3,2,1] ] )
  * 
  */
+//let originalArr= [[5,8,9,][8,9,5]]
 
 
-// const reverseStringArr = (arr) => {
-
-// 	let newString =  []
-// 	textReverse = arr.map( element => element.reverse() )
-// }
-
-// let originalArr = ['string','value','min']
-// let result = reverseStringArr(originalArr)
-// console.log(result)
-
+// const additionMultiArr = [[1,2,3] , [1,3,2] , [3,2,1] ]
+// let res = []
+// additionMultiArr.map(item => {
+//     res.push(item.reduce((acc, cv) => acc + cv))
+// })
+// console.log(res)
+//  let sumaTotal = res.reduce((acc, cv) => acc + cv)
+//  console.log(sumaTotal)
 
 
-/**
- * arr.filter(), .map()
- * Funcion que reciba un array de strings y numeros
- * Filtre solo los strings
- * luego, Capitalice cada string
- * luego, filtre solo los que tengan mas de 5 caracteres
- * y al final, los que tengan al menos 2 letras "a" 
- * 
- * p.ej.  filterStrings( ['guadalajara', 3, 'caracas', 'Oslo', 'brasil', 0] )
- * Salida -> ['Guadalajara', 'Caracas']
- */
 
 
- const filterStrings = (arr) => {
-	let onlyStrings = []
-	onlyStrings = arr.filter( (item) => {
-		if(typeof item === 'string') {
-			return item
-		}
-	})
 
-	let toUpper = []
-	toUpper = onlyStrings.map( (item) => {
-		return item.slice(0,1).toUpperCase() + item.slice(1,-1).toLowerCase()
-	})
 
-	let onlytext5 = []
-	onlytext5 = toUpper.filter( (item ) => { 
-		if ( item.length > 4 ) {
-			return item
-		}
-	})
-
-	let textA = []
-	textA = onlytext5.filter( (item ) => { 
-		if ( item.split('a').length > 2 ) {
-			return item
-		}
-	})
-
-	return textA
+const sumaArrays = array =>{
+    let res=[]
+    array.map( item => {
+        res.push(item.reduce((acc,cv) => acc + cv))
+    })
+    console.log(res)
+    let sumaTotal = res.reduce((acc, cv) => acc + cv)
+    console.log(`La suma total de los arrays es: ${sumaTotal}`)
 }
 
-let originalArr = ['guadalajara', 3, 'caracas', 'Oslo', 'brasil', 0]
-let result = filterStrings(originalArr)
-console.log(result)
+sumaArrays([[1,2,3] , [1,3,2] , [3,2,1]])

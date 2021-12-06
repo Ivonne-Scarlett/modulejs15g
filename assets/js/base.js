@@ -10,24 +10,24 @@
 
 
 
-// const fullname = ['Ivonne', 'Scarlett', 'Chavez', 'Medina']
-// let fullNameStr = ''
-// fullNameStr = fullname.reduce( (acc,cv) =>{		
-// 		return acc + cv.slice(0,1)
-// 		//return acc + cv.slice(0,1) + cv.slice(-1)
-// 		//return `${acc} ${cv.slice(0,1)}`
-// }, 'Las iniciales del nombre son: ')
-// console.log(fullNameStr)
+const fullname = ['Ivonne', 'Scarlett', 'Chavez', 'Medina']
+let fullNameStr = ''
+fullNameStr = fullname.reduce( (acc,cv) =>{		
+		return acc + cv.slice(0,1)
+		//return acc + cv.slice(0,1) + cv.slice(-1)
+		//return `${acc} ${cv.slice(0,1)}`
+}, 'Las iniciales del nombre son: ')
+console.log(fullNameStr)
 
 
-let arrRedNumbers = [11,10,9]
+// let arrRedNumbers = [11,10,9]
 
-let ressArrReduced = []
-arrRedNumbers.reduce((acc,cv) => {
-	acc.push(cv * 2)
-	return acc
-},[])
-console.log(ressArrReduced)
+// let ressArrReduced = []
+// arrRedNumbers.reduce((acc,cv) => {
+// 	acc.push(cv * 2)
+// 	return acc
+// },[])
+// console.log(ressArrReduced)
 
 
 
