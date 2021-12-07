@@ -39,7 +39,7 @@
 
 
 let originalArr = ['jorge','ana','ivan','sergio','luis','oscar']
-let arrFiltered = originalArr.filter(item => item.slice(0,1) === 'a' || item.slice(0,1) === 'e' || item.slice(0,1) === 'i' || item.slice(0,1) === 'o' || item.slice(0,1) === 'u')
+let arrFiltered = originalArr.filter(item => item.toLowerCase().slice(0,1) === 'a' || item.slice(0,1) === 'e' || item.slice(0,1) === 'i' || item.slice(0,1) === 'o' || item.slice(0,1) === 'u')
 .map(item => item.slice(0,1).toUpperCase() + item.slice(1).toLowerCase())
 console.log(arrFiltered)
 
