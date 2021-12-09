@@ -1,3 +1,191 @@
+let koder = {
+    name:"jorge",
+    lastName:"Camarillo",
+    age: 30,
+    average: [10, 10, 10, 8, 9]
+    // getFullName: function () {
+    //     console.log(this)
+    //     return `${ this.name } ${ this.lastName } ${this.age}`
+    // }
+}
+
+koder.getFullName = function () {
+    console.log(this)
+    return `${ this.name } ${ this.lastName } ${this.age}`
+}
+
+koder.getAverage = function (){
+    let counter = 0
+    sumAverage = 0
+    for(let key in koder) {        
+        counter++
+	    let sumReduce = koder.average.reduce( (acc, cv) => {
+            return sumAverage += acc             
+        }, [0] )
+	    let prom = sumAverage / counter
+        return prom
+    }
+    return   
+}
+
+//console.log(koder.getFullName())
+
+console.log(koder.getAverage())
+// -> 9.4
+
+
+
+
+
+
+
+// let salarios  = {
+//     'jorge':  3000,
+//     'juan':  7000,
+//     'Pedro':  8000
+// }
+
+// // let empleados = []
+// // for( item in salarios){
+// //     empleados.push(item)
+// //     //console.log(salarios[item])
+// // }
+
+// //console.log( Object.keys(salarios) )
+
+
+// // const sumarSalarios = (obj) => {
+// //     let suma = 0
+// //     Object.keys(obj).forEach( (empleado, index, arr) => {
+// //         let salario = obj[empleado]
+// //         suma = suma + salario
+// //         // suma += salario
+// //     })
+// //     return suma
+// // }
+// // console.log(sumarSalarios(salarios))
+
+
+
+// // const sumarSalariosRed = (obj) => {
+// //     let suma = 0
+// //     suma = Object.keys(obj).reduce( (acc, key) => {
+// //         return acc + obj[key]
+// //     }, 0)
+// //     return suma
+// // }
+// // console.log(sumarSalariosRed(salarios))
+
+
+
+
+// // const addArr = (obj) => {
+// //     let suma = 0
+// //     suma = Object.values(obj).reduce((previousValue, currentValue) => {
+// //         return previousValue += currentValue
+// //     }, 0)
+
+// //     return suma
+// // }
+// // console.log(addArr(salarios))
+
+
+// // const addArrOneLine = (obj) => Object.values(obj).reduce((acc, cv) => acc += cv, 0)
+// // console.log(addArrOneLine(salarios))
+
+
+
+
+
+// //  * Ejercicio 1.
+// //  * Dado un objeto inicial, hacer los siguientes puntos 
+// //  * 
+// //  * 1. Agregar el lenguaje 'Go' a la lista de lenguajes
+// //  * 2. Cambiar el nivel a 4
+// //  * 3. Eliminar la propiedad avatar
+// //  * 4. Agregar una nueva propiedad de edad y poner el valor de 30
+// //  * 5. Imprimir en consola todos los lenguajes dominados
+// //  * 6. Clonar el objeto en uno nuevo
+// //  * 7. Imprimir en consola el nuevo objeto
+// //  * 
+// //  * @hint https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax
+// //  */
+
+//  let koder = {
+//     languages: ["JavaScript", "Python", "Ruby"],
+//     isMentor: true,
+//     level: 3,
+//     avatar: "https://picsum.photos/200/300"
+// }
+
+// koder.languages = ["JavaScript", "Python", "Ruby", "Go"]
+// koder.level = 4
+// delete koder.avatar
+// koder['age'] = 30
+
+// console.log(koder.languages)
+
+
+// //para clonar objetos
+// let newObj = {...koder} //... sirven para iterar con cada valor adentro del objeto
+// console.log(koder, newObj)
+
+
+// /*
+//  * Ejercicio 2:
+//  * Escribir una funcion que reciba un parametro
+//  * Verificar si el parametro es un objeto
+//  * o si es un array
+//  * p.ej.  
+//  * ·> isAnObjectOrArray( [1,2,3] )
+//  * -> 'Es un array'
+//  * ·> isAnObjectOrArray( {key:'value'} )
+//  * -> 'Es un Objeto'
+//  * ·> isAnObjectOrArray( 'Hola mundo' )
+//  * -> 'No es un array ni un objeto'
+//  * 
+//  * 
+//  * @params {Object}, [Array] ,'string' - Estructura que se quiere validar
+//  * @return 'String' - mensaje de respuesta
+//  * 
+//  * @hint https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
+//  * @hint https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
+//  * 
+//  */
+
+//  const isAnObjectOrArray = (element) => {
+
+// }
+
+
+
+// /**
+//  * Ejercicio 3.
+//  * Realizar una funcion que tome como parametro un objeto
+//  * y devuelva un array de arrays con la siguiente estructura
+//  * [ [key, value], [key, value] ]
+//  * Resultado esperado: makePairs({ a: 1, b: 2 }) => [['a', 1], ['b', 2]]
+//  * 
+//  * @params {Object} object - El objeto que queremos transformar
+//  * @return [Array] - El array que se espera retornar
+//  * 
+//  * @hint https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
+//  * @hint https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+//  * 
+//  * Se tiene que realizar 2 soluciones, 1 con Object.entries() y otra con .map()
+//  */
+
+//  let objOnlyStrings =  {
+//     modelo: 'jetta',
+//     marca: 'VW',
+// }
+
+//  const makePairs = (object) => {
+    
+// }
+
+
+
 //Declaración de objetos
 // let carObject = {
 // 	//key: valor
@@ -92,40 +280,40 @@
 //Ejercicio
 
 // Array de objetos
-let koders =  [
-    {
-        name: 'jorge luis',
-        lastName: 'Camarillo',
-        age: 30,
-        generation: 6,
-        modulos: ['js','node js', 'cloud'],
-    },
-    {
-        name: 'Erik',
-        lastName: 'Gutierrez',
-        age: 20,
-        generation: 15,
-        modulos: ['js'],
-    },
-    {
-        name: 'Sara',
-        lastName: 'Reveles',
-        age: 24,
-        generation: 12,
-        modulos: ['js'],
-    }
-]
-const totalAge = arr => {
-	let total = 0
-	arr.forEach (element => {
-		total += element.age
-	})
-	return total
-}
-console.log(totalAge(koders))
+// let koders =  [
+//     {
+//         name: 'jorge luis',
+//         lastName: 'Camarillo',
+//         age: 30,
+//         generation: 6,
+//         modulos: ['js','node js', 'cloud'],
+//     },
+//     {
+//         name: 'Erik',
+//         lastName: 'Gutierrez',
+//         age: 20,
+//         generation: 15,
+//         modulos: ['js'],
+//     },
+//     {
+//         name: 'Sara',
+//         lastName: 'Reveles',
+//         age: 24,
+//         generation: 12,
+//         modulos: ['js'],
+//     }
+// ]
+// const totalAge = arr => {
+// 	let total = 0
+// 	arr.forEach (element => {
+// 		total += element.age
+// 	})
+// 	return total
+// }
+// console.log(totalAge(koders))
 
-const countAge = arr => arr.reduce((acc,val) => acc + val.age,0)
-console.log(countAge(koders))
+// const countAge = arr => arr.reduce((acc,val) => acc + val.age,0)
+// console.log(countAge(koders))
 
 
 // koders.forEach((element, index, array) => {
