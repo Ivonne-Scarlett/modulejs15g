@@ -1,3 +1,78 @@
+const reverseUser = () => {
+    let text = document.querySelector('#username').value
+    let reverse = text.split('').reverse().join('')
+    document.getElementById('usernamereversed').value = reverse     
+}
+
+let cities = ['colima', 'colombia','Estado de mexico']
+const filterCity = () => {
+    // filtrar ciudades
+    let citySearch = document.querySelector('#name__city').value
+    let citiesFiltered = cities.filter( (city) => {
+        if(city.includes(citySearch) === true){
+            return city
+        }
+    })
+
+    // creo el layout con las ciudades filtradas
+    let lista = ''
+    citiesFiltered.forEach( (value) => {
+        lista += `<li>${value}</li>`
+    })
+
+    // agrego el layout
+    document.querySelector('#listCity').innerHTML = lista
+}
+
+
+
+let koders = [
+    {
+        name: 'emilio',
+        age: 30,
+        city: 'Guadalajara'
+    },
+    {
+        name: 'Brisset',
+        age: 30,
+        city: 'Lima'
+    }
+]
+
+const filterKoder = () => {
+    // filtrar koders
+    let koderSearch = document.querySelector('#name__koder').value
+    let koderFiltered = koders.filter( (name) => {
+        if(koders.includes(koderSearch) === true){
+            return name
+        }
+    })
+
+    // creo el layout con las ciudades filtradas
+    let lista = ''
+    koderFiltered.forEach( (value) => {
+        
+    })
+
+    // agrego el layout
+    document.querySelector('#name__koder').innerHTML = lista
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
  * Selecionar elementos
  * 
@@ -93,26 +168,26 @@
     Replicar con JS este markup
  */
 
-    let ulMenu = document.createElement('ul')
-    ulMenu.classList.add('menu')
-    ulMenu.setAttribute('id','menu')
+    // let ulMenu = document.createElement('ul')
+    // ulMenu.classList.add('menu')
+    // ulMenu.setAttribute('id','menu')
     
-    let liMenuHome = document.createElement('li')
-    liMenuHome.classList.add('item__menu')
-    liMenuHome.textContent = 'Home'
-    ulMenu.appendChild(liMenuHome)
+    // let liMenuHome = document.createElement('li')
+    // liMenuHome.classList.add('item__menu')
+    // liMenuHome.textContent = 'Home'
+    // ulMenu.appendChild(liMenuHome)
     
-    let liMenuProducts = document.createElement('li')
-    liMenuProducts.classList.add('item__menu')
-    liMenuProducts.textContent = 'Products'
-    ulMenu.appendChild(liMenuProducts)
+    // let liMenuProducts = document.createElement('li')
+    // liMenuProducts.classList.add('item__menu')
+    // liMenuProducts.textContent = 'Products'
+    // ulMenu.appendChild(liMenuProducts)
     
-    let liMenuAboutUs = document.createElement('li')
-    liMenuAboutUs.classList.add('item__menu')
-    liMenuAboutUs.textContent = 'About Us'
-    ulMenu.appendChild(liMenuAboutUs)
+    // let liMenuAboutUs = document.createElement('li')
+    // liMenuAboutUs.classList.add('item__menu')
+    // liMenuAboutUs.textContent = 'About Us'
+    // ulMenu.appendChild(liMenuAboutUs)
     
-    document.getElementById('body').appendChild(ulMenu)
+    // document.getElementById('body').appendChild(ulMenu)
 
 
 

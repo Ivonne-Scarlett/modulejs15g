@@ -64,7 +64,7 @@ document.getElementsByTagName('body')[0].appendChild(ulMenu)
 //         imagen: 'https://imagenescityexpress.scdn6.secure.raxcdn.com/sites/default/files/2021-07/icono_desayuno_cortesia_2_0.png',
 //         titulo: 'DESAYUNO EN CORTESÍA*',
 //     },
-//     {
+//     {git 
 //         imagen: 'https://imagenescityexpress.scdn6.secure.raxcdn.com/sites/default/files/2021-07/icono_cancelacion_flexible_0.png',
 //         titulo: 'CANCELACIÓN SIN COSTO**',
 //     },
