@@ -4,63 +4,57 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <title>DOM</title>
 
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body >
 
     <h1 
-        class="clase1 clase2"
         id="head__title" 
         data-title="DOM" 
         data-level="4"
-    >DOM</h1>
+    >DOM manipulation</h1>
 
-    <form action="">
-        <input type="text" id="username" placeholder="nombre original" value=''>
-        <input type="text" id="usernamereversed" placeholder="nombre al reves" value=''>
-        <button type="button" class='button' onclick="reverseUser()" >reversed!</button>
-    </form>
 
-    <input type="text" id="name__koder" placeholder="Coloca un nombre" onkeyup="filterKoder()">
-    <ul id="listKoders">
-        <!-- <li>
-            <strong>Brisset</strong>
-            <span>30 Años</span>
-            <span>Lima</span>
-        </li> -->
+
+
+    <!-- <p> Insert before()</p>
+    <ul id="menuInsertBefore">
+        <li id="beforeItem">Services</li>
+        <li>About</li>
+        <li>Contact</li>
     </ul>
-     <!-- <ul>
+    <form action="">
+        <input type="text" id="username" placeholder="nombre original" onfocusin="focusInInput()" onfocusout="focusOutInput()">
+        <input type="text" id="usernamereversed" placeholder="nombre al reves" >
+        <button type="button" onclick="reverseUser()" >reversed!</button>
+    </form>
+    <input type="text" id="name__city" placeholder="Coloca una ciudad" onkeyup="filterCity()">
+    <ul id="listCity">
         
-        <li>
-            <a href="" class="link__menu">
-                <span>menu 1</span>
-            </a>
-        </li>
-        <li>
-            <a href="" class="link__menu">
-                <span>menu 2</span>
-            </a>
-        </li>
+    </ul> -->
 
-        
-    </ul>  -->
+    <form action="" class="form__filter">
+        <select name="" id="filterby" onchange="changeFilter()">
+            <option value="name">Nombre</option>
+            <option value="age">Edad</option>
+            <option value="city">Ciudad</option>
+        </select>
+        <input type="text" id="name__koder" 
+        placeholder="Coloca un nombre" 
+        onkeyup="filterKoder()">
+        <ul id="listKoders">
+            
+        </ul>
+    </form>
+    
 
-    <!-- <header class='center'>
-        <div class='card'>
-            <img src="https://imagenescityexpress.scdn6.secure.raxcdn.com/sites/default/files/2021-07/hotel1.png">
-            <h2>La mayor cobertura</h2>
-        </div>
-        <div class='card'>
-            <img src="https://imagenescityexpress.scdn6.secure.raxcdn.com/sites/default/files/2021-07/hotel1.png">
-            <h2>Desayuno en cortesia</h2>
-        </div>
-
-    </header> -->
-
-     <script src="/assets/js/base.js"></script> 
-    <!-- <script src="/assets/js/homework.js"></script> -->
+    <script src="/assets/js/filterArr.js"></script>
+    <!-- <script src="/assets/js/is_largest.js"></script> -->
 
 </body>
 </html>
