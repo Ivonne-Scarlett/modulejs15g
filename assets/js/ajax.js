@@ -1,108 +1,61 @@
-/**
- * AJAX
- * Asynchronous JavaScript And XML
- * Metodología
- * 
- * xmlhttprequest
- * .fetch()
- * 
- * https://www.javascript-coder.com/tutorials/images/ajax-block-diagram1.jpg
- * https://jsonplaceholder.typicode.com/posts
- * 
- */
+// GET
+// VERbost http (POST, PUT, PATCH,  GET,DELETE)
 
-// cliente
-// armar el request
-// enviar la peticion http
-// verbos http
-// POST, GET, PUT, PATCH, DELETE
-// 
-// server
-// status code
-// entender la peticion
-// armar la respuesta
-// enviar la respuesta
-
-// XMLHttpRequest()
-/**
- * Declarar un objeto XMLHttpRequest
- * Abrir la conexion (empezar a creat el request)
- * Escuchar cuando el response este listo
- * Enviar la peticion
- * 
- */
-
-//  Declarar un objeto XMLHttpRequest
+// POST
 const xhttp = new XMLHttpRequest()
-const xhttp2 = new XMLHttpRequest()
-// Abrir la conexion (empezar a creat el request)
-// xhttp.open(metodo, url)
-xhttp.open( "GET" , "https://jsonplaceholder.typicode.com/posts/1", true)
-xhttp2.open( "GET" , "https://jsonplaceholder.typicode.com/posts/1/comments", true)
-
-
-
-// Escuchar cuando el response este listo
+xhttp.open( "POST" , "https://genjs-292ac-default-rtdb.firebaseio.com/posts/.json", true)
 xhttp.onload = function(data) {
     if(data.target.status === 200){
-        let res = data.target.response
-        let objResp = JSON.parse(res)
-        // console.log(res)
-        // console.log(objResp)
-        // imprimir en DOM
-        let templateUser = ''
-        
-            templateUser += `            
-            <div class="col-12 col-md-4 ">
-                <div class="card align-items-center mb-4 p-3 bg-light" >
-                    <div class="card-body">
-                        <h5 class="card-title">${objResp.title}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">${objResp.id}</h6>
-                        <p class="card-text">${objResp.body}</p>
-                        <div class="coment">
-
-                        </div>
-                        
-
-                    </div>
-                </div>
-            </div>            
-            `
-        
-       
-        document.querySelector('.row').innerHTML = templateUser
+        console.log(data)
     }
-    
 }
 
-// Enviar la peticion
-xhttp.send()
-
-xhttp2.onload = function(data) {
-    if(data.target.status === 200){
-        let res = data.target.response
-        let objResp = JSON.parse(res)
-        console.log(res)
-        console.log(objResp)
-        // imprimir en DOM
-        let templateUser = ''        
-            templateUser = `           
-                        <div >                        
-                            <ul class="list-group">
-                                <li class="list-group-item">${objResp.name}</li>
-                                <li class="list-group-item">${objResp.email}</li>
-                                <li class="list-group-item">${objResp.body}</li>
-                            </ul>                     
-                        </div>
-
-            `
-        document.querySelector('.coment').innerHTML = templateUser
-    }
-    
+let objNewPost =  {
+    author: 'ivonne',
+    title: 'foo',
+    body: 'bar lorem',
 }
 
-// Enviar la peticion
-xhttp2.send()
+//xhttp.send( JSON.stringify(objNewPost) )
+
+// PATCH actualizar datos
+const updateUser =  (objUpdate, idUser) => {
+    const xhttp = new XMLHttpRequest()
+    xhttp.open( "PATCH" , `https://genjs-292ac-default-rtdb.firebaseio.com/posts/${idUser}.json`, true)
+    xhttp.onload = function(data) {
+        if(data.target.status === 200){
+            console.log(data)
+        }
+    }
+    xhttp.send( JSON.stringify(objUpdate) )
+}
+
+let objUpdatePost =  {
+    author: 'Ivonne Scarlett Chavez Medina',
+}
+
+//updateUser(objUpdatePost, '-Mr59ncZddD9O8vP5q-e')
+
+// DELETE Eliminar datos
+const deleteUser =  (idUser) => {
+    const xhttp = new XMLHttpRequest()
+    xhttp.open( "DELETE" , `https://genjs-292ac-default-rtdb.firebaseio.com/posts/${idUser}.json`, true)
+    xhttp.onload = function(data) {
+        if(data.target.status === 200){
+            console.log(data)
+        }
+    }
+    xhttp.send()
+}
+//deleteUser('-Mr5APubLTKAdcgeulQ0')
+
+
+
+
+
+
+
+
 
 
 
